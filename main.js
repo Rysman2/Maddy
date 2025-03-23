@@ -23,7 +23,7 @@
 
   // Funzione per mostrare i risultati dalla collezione "risposte"
   async function mostraRisultati() {
-    const querySnapshot = await getDocs(collection(db, "risposte"));
+    const querySnapshot = await getDocs(collection(db, "default"));
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
       // Qui puoi creare elementi HTML per mostrare i dati sul sito
