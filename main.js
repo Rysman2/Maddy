@@ -33,9 +33,3 @@
   // Chiama la funzione per mostrare i risultati
   mostraRisultati();
 </script>
-
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
