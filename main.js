@@ -24,11 +24,12 @@
   // Funzione per mostrare i risultati dalla collezione "risposte"
   async function mostraRisultati() {
     const querySnapshot = await getDocs(collection(db, "default"));
+    console.log("Documenti trovati:", querySnapshot.size);
     querySnapshot.forEach((doc) => {
       console.log(doc.id, " => ", doc.data());
-      // Qui puoi creare elementi HTML per mostrare i dati sul sito
-    });
-  }
+      // Qui puoi creare elementi HTML per mostrare i dati sul sit
+  });
+}
 
   // Chiama la funzione per mostrare i risultati
   mostraRisultati();
