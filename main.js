@@ -3,7 +3,12 @@
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js';
   import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js';
   import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js';
+import { collection, addDoc } from 'firebase/firestore';
 
+await addDoc(collection(db, "default"), {
+  nome: "Mario",
+  messaggio: "Ciao!"
+});
   // Configurazione del tuo progetto Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfUuE3IbeY9QrTo",
