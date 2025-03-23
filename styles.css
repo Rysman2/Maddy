@@ -1,0 +1,145 @@
+/* --- STILI GENERALI --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4a9c3; /* Sfondo rosa acceso */
+    font-family: 'Comic Sans', cursive, sans-serif;
+    overflow: hidden; /* Nasconde la scrollbar se non necessaria */
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  /* Contenitore principale */
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Testo “YOU'RE INVITED” in stile Y2K */
+  .title-y2k {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    font-size: 3rem;
+    color: #e259d0;
+    text-shadow: 2px 2px #fff, 4px 4px #ccc;
+    font-weight: bold;
+  }
+  
+  /* --- ELEMENTI GRAFICI ASSOLUTI (disco ball, telefono, cuori) --- */
+  .disco-ball {
+    position: absolute;
+    scale: 200%;
+    width: 150px;
+    top: 80%;
+    left: 15%;
+    transform: translateY(-50%);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .flip-phone {
+    position: absolute;
+    scale: 200%;
+    width: 150px;
+    top: 90%;
+    right: 20%;
+    transform: translateY(-50%);
+    animation: float 4s ease-in-out infinite alternate;
+  }
+  
+  /* Cuore decorativo in alto a sinistra */
+  .heart-left {
+    position: absolute;
+    scale: 200%;
+    width: 80px;
+    top: 10%;
+    left: 17%;
+    animation: spin 8s linear infinite;
+  }
+  
+  /* Cuore decorativo in alto a destra */
+  .heart-right {
+    position: absolute;
+    scale: 200%;
+    width: 80px;
+    top: 15%;
+    right: 17%;
+    animation: spin 8s linear infinite reverse;
+  }
+  
+  /* --- FINESTRA STILE “RETRO” PER LE INFO --- */
+  .info-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.3);
+    text-align: left;
+    padding-bottom: 10px;
+  }
+  
+  .window-title {
+    background-color: #ccc;
+    padding: 8px;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .window-content {
+    padding: 10px;
+  }
+  
+  .window-content p {
+    margin: 8px 0;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center; /* Centra i pulsanti orizzontalmente */
+    align-items: center;     /* Centra i pulsanti verticalmente */
+    gap: 10px;               /* Spazio tra i pulsanti */
+    width: 100%;
+    height: 100%;
+  }
+  button {
+    width: fit-content; /* O una larghezza fissa es. 150px */
+    margin: 50 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px outset #000;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    text-align: center;
+    background-color: #ffd700;
+    transform: scale(1.05);
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(-50%) translateX(0);
+    }
+    50% {
+      transform: translateY(-60%) translateX(5px);
+    }
+    100% {
+      transform: translateY(-50%) translateX(0);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
