@@ -1,9 +1,18 @@
 /* --- STILI GENERALI --- */
+@font-face {
+  font-family: 'Joystix Monospace';
+  src: url('./fonts/JoystixMonospace.woff2') format('woff2'),
+       url('./fonts/JoystixMonospace.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     background-color: #f4a9c3; /* Sfondo rosa acceso */
-    font-family: Comic Sans;
+    font-family: 'Joystix Monospace', monospace;
     overflow: hidden; /* Nasconde la scrollbar se non necessaria */
     position: relative;
     min-height: 100vh;
