@@ -1,17 +1,3 @@
-document.getElementById('testBtn').addEventListener('click', async () => {
-  console.log("Clic sul pulsante, invio dati...");
-  try {
-    const docRef = await addDoc(collection(db, "risposte"), {
-      nome: "Mario",
-      messaggio: "Ciao!",
-      submitted_at: new Date()
-    });
-    console.log("Documento aggiunto con ID: ", docRef.id);
-    alert("Documento aggiunto!");
-  } catch (error) {
-    console.error("Errore durante l'invio:", error);
-  }
-});
 
 <script type="module">
   // Import the functions you need from the SDKs you need
@@ -29,6 +15,20 @@ async function mostraRisultati() {
     // Puoi anche creare elementi HTML per mostrare i dati sul sito
   });
 }
+document.getElementById('testBtn').addEventListener('click', async () => {
+  console.log("Clic sul pulsante, invio dati...");
+  try {
+    const docRef = await addDoc(collection(db, "risposte"), {
+      nome: "Mario",
+      messaggio: "Ciao!",
+      submitted_at: new Date()
+    });
+    console.log("Documento aggiunto con ID: ", docRef.id);
+    alert("Documento aggiunto!");
+  } catch (error) {
+    console.error("Errore durante l'invio:", error);
+  }
+});
 
 mostraRisultati();
   // Your web app's Firebase configuration
