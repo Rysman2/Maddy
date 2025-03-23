@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4a9c3; /* Sfondo rosa acceso */
-    font-family: 'Comic Sans', cursive, sans-serif;
+    font-family: Comic Sans, cursive, sans-serif;
     overflow: hidden; /* Nasconde la scrollbar se non necessaria */
     position: relative;
     min-height: 100vh;
