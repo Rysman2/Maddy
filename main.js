@@ -1,7 +1,7 @@
 
 <script type="module">
   // Import the functions you need from the SDKs you need
-  import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js';
+  import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js';
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
@@ -15,20 +15,6 @@ async function mostraRisultati() {
     // Puoi anche creare elementi HTML per mostrare i dati sul sito
   });
 }
-document.getElementById('testBtn').addEventListener('click', async () => {
-  console.log("Clic sul pulsante, invio dati...");
-  try {
-    const docRef = await addDoc(collection(db, "risposte"), {
-      nome: "Mario",
-      messaggio: "Ciao!",
-      submitted_at: new Date()
-    });
-    console.log("Documento aggiunto con ID: ", docRef.id);
-    alert("Documento aggiunto!");
-  } catch (error) {
-    console.error("Errore durante l'invio:", error);
-  }
-});
 
 mostraRisultati();
   // Your web app's Firebase configuration
