@@ -40,7 +40,7 @@ body {
   /* --- ELEMENTI GRAFICI ASSOLUTI (disco ball, telefono, cuori) --- */
   .disco-ball {
     position: absolute;
-    scale: 200%;
+    scale: 250%;
     width: 150px;
     top: 80%;
     left: 15%;
@@ -50,7 +50,7 @@ body {
   
   .flip-phone {
     position: absolute;
-    scale: 200%;
+    scale: 250%;
     width: 150px;
     top: 90%;
     right: 20%;
@@ -61,7 +61,7 @@ body {
   /* Cuore decorativo in alto a sinistra */
   .heart-left {
     position: absolute;
-    scale: 200%;
+    scale: 250%;
     width: 80px;
     top: 10%;
     left: 17%;
@@ -71,7 +71,7 @@ body {
   /* Cuore decorativo in alto a destra */
   .heart-right {
     position: absolute;
-    scale: 200%;
+    scale: 250%;
     width: 80px;
     top: 15%;
     right: 17%;
