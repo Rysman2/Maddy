@@ -4,10 +4,10 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 
 // Configurazione Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfU3IbeY9QrTo",
-  authDomain: "Maddy-e-Domy.firebaseapp.com",
-  projectId: "Maddy-e-Domy",
-  storageBucket: "Maddy-e-Domy.appspot.com",
+  apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfUuE3IbeY9QrTo",
+  authDomain: "maddy-e-domy.firebaseapp.com",
+  projectId: "maddy-e-domy",
+  storageBucket: "maddy-e-domy.firebasestorage.app",
   messagingSenderId: "620926001920",
   appId: "1:620926001920:web:a35dcf0ea6868cbbb649e5",
   measurementId: "G-ERQBZ8SGYV"
