@@ -1,35 +1,37 @@
-import { collection, getDocs } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js';
+// Importa Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-firestore.js";
 
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Configurazione Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfUuE3IbeY9QrTo",
-  authDomain: "maddy-e-domy.firebaseapp.com",
-  projectId: "maddy-e-domy",
-  storageBucket: "maddy-e-domy.firebasestorage.app",
+  apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfU3IbeY9QrTo",
+  authDomain: "Maddy-e-Domy.firebaseapp.com",
+  projectId: "Maddy-e-Domy",
+  storageBucket: "Maddy-e-Domy.appspot.com",
   messagingSenderId: "620926001920",
   appId: "1:620926001920:web:a35dcf0ea6868cbbb649e5",
   measurementId: "G-ERQBZ8SGYV"
 };
 
-// Initialize Firebase
+// Inizializza Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-// Funzione per salvare una risposta
-function salvaRisposta(nome, risposta) {
-  db.collection("risposte").add({
-    nome: nome,
-    risposta: risposta,
-    submitted_at: firebase.firestore.FieldValue.serverTimestamp()
-  })
-  .then(() => {
-    console.log("Risposta salvata!");
-  })
-  .catch((error) => {
-    console.error("Errore: ", error);
-  });
+// Funzione per salvare la risposta in Firestore
+async function salvaRisposta(risposta) {
+  try {
+    await addDoc(collection(db, "risposte"), {
+      risposta: risposta,
+      timestamp: new Date()
+    });
+    alert("Risposta salvata con successo!");
+  } catch (e) {
+    console.error("Errore durante il salvataggio: ", e);
+  }
 }
+
+// Associa gli eventi ai bottoni
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".buttons button:nth-child(1)").addEventListener("click", () => salvaRisposta("Yes"));
+  document.querySelector(".buttons button:nth-child(2)").addEventListener("click", () => salvaRisposta("No"));
+});
