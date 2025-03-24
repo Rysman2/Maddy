@@ -18,3 +18,22 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Inizializza Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// Funzione per salvare una risposta
+function salvaRisposta(nome, risposta) {
+  db.collection("risposte").add({
+    nome: nome,
+    risposta: risposta,
+    submitted_at: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(() => {
+    console.log("Risposta salvata!");
+  })
+  .catch((error) => {
+    console.error("Errore: ", error);
+  });
+}
