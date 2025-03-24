@@ -12,26 +12,31 @@ const firebaseConfig = {
   appId: "1:620926001920:web:a35dcf0ea6868cbbb649e5",
   measurementId: "G-ERQBZ8SGYV"
 };
-
-// Inizializza Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Funzione per salvare la risposta in Firestore
+// Funzione per salvare la risposta nel database
 async function salvaRisposta(risposta) {
+  const nomeUtente = document.getElementById("userName").value.trim();
+
+  if (!nomeUtente) {
+    alert("Inserisci il tuo nome!");
+    return;
+  }
+
   try {
     await addDoc(collection(db, "risposte"), {
+      nome: nomeUtente,
       risposta: risposta,
       timestamp: new Date()
     });
-    alert("Risposta salvata con successo!");
-  } catch (e) {
-    console.error("Errore durante il salvataggio: ", e);
+    alert("Risposta salvata! Grazie 😊");
+  } catch (error) {
+    console.error("Errore nel salvataggio:", error);
+    alert("Errore nel salvataggio. Riprova.");
   }
 }
 
-// Associa gli eventi ai bottoni
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".buttons button:nth-child(1)").addEventListener("click", () => salvaRisposta("Yes"));
-  document.querySelector(".buttons button:nth-child(2)").addEventListener("click", () => salvaRisposta("No"));
-});
+// Collega i bottoni alle funzioni
+document.getElementById("btnYes").addEventListener("click", () => salvaRisposta("Yes :)"));
+document.getElementById("btnNo").addEventListener("click", () => salvaRisposta("No ;("));
