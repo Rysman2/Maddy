@@ -12,7 +12,7 @@ await addDoc(collection(db, "default"), {
   // Configurazione del tuo progetto Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyBSoaYo3Md4dXuqVV3cBfUuE3IbeY9QrTo",
-    authDomain: "Maddy e DOmy.firebaseapp.com",
+    authDomain: "MaddyeDOmy.firebaseapp.com",
     projectId: "Maddy e DOmy",
     storageBucket: "Maddy e DOmy.firebasestorage.app",
     messagingSenderId: "620926001920",
