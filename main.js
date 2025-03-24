@@ -38,5 +38,5 @@ async function salvaRisposta(risposta) {
 }
 
 // Collega i bottoni alle funzioni
-document.getElementById("Yesbutton").addEventListener("click", () => salvaRisposta("Yes :)"));
-document.getElementById("Nobutton").addEventListener("click", () => salvaRisposta("No ;("));
+document.getElementById("yesButton").addEventListener("click", () => salvaRisposta("Yes :)"));
+document.getElementById("noButton").addEventListener("click", () => salvaRisposta("No ;("));
