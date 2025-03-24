@@ -102,7 +102,7 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: top left, top right, bottom left;
   background-size: 80px, 80px, 80px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     width: 280px;
     transform: translate(-50%, -50%);
