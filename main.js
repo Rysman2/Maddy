@@ -19,10 +19,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-// Inizializza Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
 // Funzione per salvare una risposta
 function salvaRisposta(nome, risposta) {
   db.collection("risposte").add({
