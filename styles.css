@@ -16,9 +16,6 @@ body {
     overflow: hidden; /* Nasconde la scrollbar se non necessaria */
     position: relative;
     min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   }
   
   /* Contenitore principale */
@@ -83,10 +80,6 @@ body {
   /* --- FINESTRA STILE “RETRO” PER LE INFO --- */
   .info-window {
     position: absolute;
-  background-image: url('WOW.png'), url('Adobe Express - file.png'), url('phone.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top left, top right, bottom left;
-  background-size: 80px, 80px, 80px;
     top: 40%;
     left: 50%;
     width: 280px;
