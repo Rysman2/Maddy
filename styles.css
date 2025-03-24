@@ -85,6 +85,10 @@ body {
   /* --- FINESTRA STILE “RETRO” PER LE INFO --- */
   .info-window {
     position: absolute;
+  background-image: url('WOW.png'), url('Adobe Express - file.png'), url('phone.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top left, top right, bottom left;
+  background-size: 80px, 80px, 80px;
     top: 50%;
     left: 50%;
     width: 280px;
@@ -192,13 +196,6 @@ body {
 .input-field:focus {
   border-color: #00ffff; /* Ciano */
   box-shadow: 0px 0px 12px #00ffff;
-}
-.info-window {
-  /* Aggiungi queste proprietà per le immagini di background */
-  background-image: url('WOW.png'), url('Adobe Express - file.png'), url('phone.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top left, top right, bottom left;
-  background-size: 80px, 80px, 80px;
 }
     100% {
       transform: rotate(360deg);
