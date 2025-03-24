@@ -1,4 +1,4 @@
-<script type=<"module">
+<script type="module">
   // Importa i moduli necessari da Firebase
   import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js';
   import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js';
